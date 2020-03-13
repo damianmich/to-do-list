@@ -30,7 +30,6 @@ html {
 
 .input-task__input {
   background-color: #457B9D;
-  color: white;
   margin: 15px 0;
   width: 90%;
   padding: 15px;
@@ -40,6 +39,26 @@ html {
   letter-spacing: 2px;
   -webkit-box-shadow: 0 0 2px 0 #457B9D;
           box-shadow: 0 0 2px 0 #457B9D;
+}
+
+.input-task__input::-webkit-input-placeholder {
+  color: white;
+  font-weight: bold;
+}
+
+.input-task__input:-ms-input-placeholder {
+  color: white;
+  font-weight: bold;
+}
+
+.input-task__input::-ms-input-placeholder {
+  color: white;
+  font-weight: bold;
+}
+
+.input-task__input::placeholder {
+  color: white;
+  font-weight: bold;
 }
 
 .input-task__input:focus {
