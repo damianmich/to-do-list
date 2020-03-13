@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #F1FAEE;
+}
+
+.input-task {
+    position: relative;
+    background-color: #1D3557;
+    display: flex;
+    justify-content: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 5px 0 #1D3557;
+    margin-bottom: 15px;
+
+    &__input {
+        background-color: #457B9D;
+        color: white;
+        margin: 15px 0;
+        width: 90%;
+        padding: 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        box-shadow: 0 0 2px 0 #457B9D;
+    }
+
+    &__input:focus {
+        background-color: rgb(85, 143, 179);
+    }
+
+    &__button {
+        display: block;
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        right: 2%;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: white;
+        border: 1px solid #457B9D;
+        color: #457B9D;
+        font-size: 3rem;
+        cursor: pointer;
+    }
+
+    &__button:hover {
+        font-size: 3.5rem;
+    }
+}
+
+.tasks {
+    &__tasks-to-do__item {
+        list-style-type: none;
+    }
+
+    &__tasks-to-do .tasks__tasks-to-do__item::after {
+        content: '';
+        display: block;
+        width: 50%;
+        height: 1px;
+        margin: 25px auto;
+        background-color: rgb(228, 228, 228);
+        box-shadow: 0 0 2px 0 rgb(228, 228, 228);
+    }
+
+    &__tasks-done .tasks__tasks-to-do__item:empty:after {
+        content: 'Nie wykonałeś/aś jeszcze żadnych zadań.';
+    }
+
+    &__tasks-to-do .tasks__tasks-to-do__item:empty::before {
+        margin-top: 45px;
+        content: 'Nie masz nic do zrobienia :)';
+    }
+
+    &__tasks-done .tasks__tasks-to-do__item:empty:after,
+    &__tasks-to-do .tasks__tasks-to-do__item:empty::before {
+        display: block;
+        font-size: 1.5rem;
+        text-align: center;
+        color: rgb(187, 187, 187);
+    }
+
+    &__tasks-to-do__link {
+        display: flex;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px 0 rgb(196, 196, 196);
+        background-color: white;
+        font-size: 1.4rem;
+        align-items: center;
+
+        p {
+            flex-grow: 1;
+        }
+
+        .fa-trash-alt {
+            padding: 5px 10px;
+            border-right: 2px solid rgb(228, 228, 228);
+            font-size: 1.8rem;
+            color: #457B9D;
+            transition: .2s linear;
+
+            &:hover {
+                color: rgb(255, 38, 0);
+            }
+        }
+
+        .fa-check-circle {
+            padding: 5px 5px 5px 10px;
+            font-size: 1.8rem;
+            color: #457B9D;
+            transition: .2s linear;
+
+            &:hover {
+                color: green;
+            }
+        }
+    }
+
+    &__tasks-done &__tasks-to-do__link .fa-check-circle {
+        color: green;
+    }
+}

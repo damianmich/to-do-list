@@ -1,0 +1,152 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #F1FAEE;
+}
+
+.input-task {
+  position: relative;
+  background-color: #1D3557;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-box-shadow: 0 0 5px 0 #1D3557;
+          box-shadow: 0 0 5px 0 #1D3557;
+  margin-bottom: 15px;
+}
+
+.input-task__input {
+  background-color: #457B9D;
+  color: white;
+  margin: 15px 0;
+  width: 90%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  -webkit-box-shadow: 0 0 2px 0 #457B9D;
+          box-shadow: 0 0 2px 0 #457B9D;
+}
+
+.input-task__input:focus {
+  background-color: #558fb3;
+}
+
+.input-task__button {
+  display: block;
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  right: 2%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: white;
+  border: 1px solid #457B9D;
+  color: #457B9D;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.input-task__button:hover {
+  font-size: 3.5rem;
+}
+
+.tasks__tasks-to-do__item {
+  list-style-type: none;
+}
+
+.tasks__tasks-to-do .tasks__tasks-to-do__item::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 1px;
+  margin: 25px auto;
+  background-color: #e4e4e4;
+  -webkit-box-shadow: 0 0 2px 0 #e4e4e4;
+          box-shadow: 0 0 2px 0 #e4e4e4;
+}
+
+.tasks__tasks-done .tasks__tasks-to-do__item:empty:after {
+  content: 'Nie wykonałeś/aś jeszcze żadnych zadań.';
+}
+
+.tasks__tasks-to-do .tasks__tasks-to-do__item:empty::before {
+  margin-top: 45px;
+  content: 'Nie masz nic do zrobienia :)';
+}
+
+.tasks__tasks-done .tasks__tasks-to-do__item:empty:after,
+.tasks__tasks-to-do .tasks__tasks-to-do__item:empty::before {
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #bbbbbb;
+}
+
+.tasks__tasks-to-do__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px 0 #c4c4c4;
+          box-shadow: 0 0 5px 0 #c4c4c4;
+  background-color: white;
+  font-size: 1.4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tasks__tasks-to-do__link p {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.tasks__tasks-to-do__link .fa-trash-alt {
+  padding: 5px 10px;
+  border-right: 2px solid #e4e4e4;
+  font-size: 1.8rem;
+  color: #457B9D;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.tasks__tasks-to-do__link .fa-trash-alt:hover {
+  color: #ff2600;
+}
+
+.tasks__tasks-to-do__link .fa-check-circle {
+  padding: 5px 5px 5px 10px;
+  font-size: 1.8rem;
+  color: #457B9D;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.tasks__tasks-to-do__link .fa-check-circle:hover {
+  color: green;
+}
+
+.tasks__tasks-done .tasks__tasks-to-do__link .fa-check-circle {
+  color: green;
+}
+/*# sourceMappingURL=style.css.map */
