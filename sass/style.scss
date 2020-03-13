@@ -31,6 +31,10 @@ html {
         font-size: 1.5rem;
         letter-spacing: 2px;
         box-shadow: 0 0 2px 0 #457B9D;
+
+        &::placeholder {
+            color: white;
+        }
     }
 
     &__input:focus {
