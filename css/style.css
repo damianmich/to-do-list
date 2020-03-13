@@ -29,7 +29,7 @@ html {
 }
 
 .input-task__input {
-  background-color: #457B9D;
+  background-color: #91c0dd;
   margin: 15px 0;
   width: 90%;
   padding: 15px;
@@ -42,27 +42,27 @@ html {
 }
 
 .input-task__input::-webkit-input-placeholder {
-  color: white;
+  color: black;
   font-weight: bold;
 }
 
 .input-task__input:-ms-input-placeholder {
-  color: white;
+  color: black;
   font-weight: bold;
 }
 
 .input-task__input::-ms-input-placeholder {
-  color: white;
+  color: black;
   font-weight: bold;
 }
 
 .input-task__input::placeholder {
-  color: white;
+  color: black;
   font-weight: bold;
 }
 
 .input-task__input:focus {
-  background-color: #558fb3;
+  background-color: #d1e1eb;
 }
 
 .input-task__button {

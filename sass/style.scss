@@ -21,7 +21,7 @@ html {
     margin-bottom: 15px;
 
     &__input {
-        background-color: #457B9D;
+        background-color: #91c0dd;
         margin: 15px 0;
         width: 90%;
         padding: 15px;
@@ -32,13 +32,13 @@ html {
         box-shadow: 0 0 2px 0 #457B9D;
 
         &::placeholder {
-            color: white;
+            color: black;
             font-weight: bold;
         }
     }
 
     &__input:focus {
-        background-color: rgb(85, 143, 179);
+        background-color: #d1e1eb;
     }
 
     &__button {
