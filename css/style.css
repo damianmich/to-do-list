@@ -43,22 +43,18 @@ html {
 
 .input-task__input::-webkit-input-placeholder {
   color: black;
-  font-weight: bold;
 }
 
 .input-task__input:-ms-input-placeholder {
   color: black;
-  font-weight: bold;
 }
 
 .input-task__input::-ms-input-placeholder {
   color: black;
-  font-weight: bold;
 }
 
 .input-task__input::placeholder {
   color: black;
-  font-weight: bold;
 }
 
 .input-task__input:focus {
