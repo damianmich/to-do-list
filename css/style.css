@@ -9,7 +9,9 @@
 html {
   font-size: 10px;
   font-family: 'Roboto', sans-serif;
-  background-color: #F1FAEE;
+  background-color: #dcf2fd;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .input-task {
@@ -29,7 +31,7 @@ html {
 }
 
 .input-task__input {
-  background-color: #91c0dd;
+  background-color: #dcf2fd;
   margin: 15px 0;
   width: 90%;
   padding: 15px;
@@ -58,7 +60,7 @@ html {
 }
 
 .input-task__input:focus {
-  background-color: #d1e1eb;
+  background-color: white;
 }
 
 .input-task__button {
@@ -73,6 +75,8 @@ html {
           transform: translateY(-50%);
   background-color: white;
   border: 1px solid #457B9D;
+  -webkit-box-shadow: 0 0 3px 2px #457B9D;
+          box-shadow: 0 0 3px 2px #457B9D;
   color: #457B9D;
   font-size: 3rem;
   cursor: pointer;
@@ -92,9 +96,9 @@ html {
   width: 50%;
   height: 1px;
   margin: 25px auto;
-  background-color: #e4e4e4;
-  -webkit-box-shadow: 0 0 2px 0 #e4e4e4;
-          box-shadow: 0 0 2px 0 #e4e4e4;
+  background-color: #bbbbbb;
+  -webkit-box-shadow: 0 0 2px 0 #bbbbbb;
+          box-shadow: 0 0 2px 0 #bbbbbb;
 }
 
 .tasks__tasks-done .tasks__tasks-to-do__item:empty:after {
@@ -121,8 +125,8 @@ html {
   margin: 10px;
   padding: 10px;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 5px 0 #c4c4c4;
-          box-shadow: 0 0 5px 0 #c4c4c4;
+  -webkit-box-shadow: 0 0 5px 0 #bbbbbb;
+          box-shadow: 0 0 5px 0 #bbbbbb;
   background-color: white;
   font-size: 1.4rem;
   -webkit-box-align: center;
@@ -138,7 +142,7 @@ html {
 
 .tasks__tasks-to-do__link .fa-trash-alt {
   padding: 5px 10px;
-  border-right: 2px solid #e4e4e4;
+  border-right: 2px solid #bbbbbb;
   font-size: 1.8rem;
   color: #457B9D;
   -webkit-transition: .2s linear;

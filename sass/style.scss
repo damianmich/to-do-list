@@ -1,3 +1,8 @@
+$main-color: rgb(220, 242, 253);
+$second-color:#457B9D;
+$task-color: #1D3557;
+$gray-elements-color: rgb(187, 187, 187);
+
 * {
     margin: 0;
     padding: 0;
@@ -7,21 +12,23 @@
 html {
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
-    background-color: #F1FAEE;
+    background-color: $main-color;
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
 .input-task {
     position: relative;
-    background-color: #1D3557;
+    background-color: $task-color;
     display: flex;
     justify-content: center;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    box-shadow: 0 0 5px 0 #1D3557;
+    box-shadow: 0 0 5px 0 $task-color;
     margin-bottom: 15px;
 
     &__input {
-        background-color: #91c0dd;
+        background-color: $main-color;
         margin: 15px 0;
         width: 90%;
         padding: 15px;
@@ -29,7 +36,7 @@ html {
         border-radius: 5px;
         font-size: 1.5rem;
         letter-spacing: 2px;
-        box-shadow: 0 0 2px 0 #457B9D;
+        box-shadow: 0 0 2px 0 $second-color;
 
         &::placeholder {
             color: black;
@@ -37,7 +44,7 @@ html {
     }
 
     &__input:focus {
-        background-color: #d1e1eb;
+        background-color: rgb(255, 255, 255);
     }
 
     &__button {
@@ -50,8 +57,9 @@ html {
         top: 50%;
         transform: translateY(-50%);
         background-color: white;
-        border: 1px solid #457B9D;
-        color: #457B9D;
+        border: 1px solid $second-color;
+        box-shadow: 0 0 3px 2px $second-color;
+        color: $second-color;
         font-size: 3rem;
         cursor: pointer;
     }
@@ -72,8 +80,8 @@ html {
         width: 50%;
         height: 1px;
         margin: 25px auto;
-        background-color: rgb(228, 228, 228);
-        box-shadow: 0 0 2px 0 rgb(228, 228, 228);
+        background-color: $gray-elements-color;
+        box-shadow: 0 0 2px 0 $gray-elements-color;
     }
 
     &__tasks-done .tasks__tasks-to-do__item:empty:after {
@@ -90,7 +98,7 @@ html {
         display: block;
         font-size: 1.5rem;
         text-align: center;
-        color: rgb(187, 187, 187);
+        color: $gray-elements-color;
     }
 
     &__tasks-to-do__link {
@@ -98,7 +106,7 @@ html {
         margin: 10px;
         padding: 10px;
         border-radius: 5px;
-        box-shadow: 0 0 5px 0 rgb(196, 196, 196);
+        box-shadow: 0 0 5px 0 $gray-elements-color;
         background-color: white;
         font-size: 1.4rem;
         align-items: center;
@@ -109,9 +117,9 @@ html {
 
         .fa-trash-alt {
             padding: 5px 10px;
-            border-right: 2px solid rgb(228, 228, 228);
+            border-right: 2px solid $gray-elements-color;
             font-size: 1.8rem;
-            color: #457B9D;
+            color: $second-color;
             transition: .2s linear;
 
             &:hover {
@@ -122,7 +130,7 @@ html {
         .fa-check-circle {
             padding: 5px 5px 5px 10px;
             font-size: 1.8rem;
-            color: #457B9D;
+            color: $second-color;
             transition: .2s linear;
 
             &:hover {
